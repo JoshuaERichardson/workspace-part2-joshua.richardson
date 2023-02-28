@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+NOTES on DOCTYPE declaration:
+0. If you omit the DOCTYPE, you will get runtime warnings from Log4j - so include it!
+1. You will often see the simple form shown immediately below:
+   <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+   Perfectly acceptable, though your IDE may warn that it can't find the DTD,
+   and may not offer context-sensitive help (Ctrl-Space), which is very useful.
+   As long as you get the XML correct, you'll be fine,
+   as the DTD is included in the log4j.jar file.
+2. The most qualified way to write it is as we've done so here,
+   specifying both PUBLIC and SYSTEM IDs.
+   Caveat: for XML validation and context-sensitive help, your IDE must 
+   recognize the PUBLIC ID, or you must have an Internet connection for the SYSTEM ID.
+-->
+<!DOCTYPE log4j:configuration
+  PUBLIC "-//APACHE//DTD LOG4J 1.2//EN"
+         "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+  
+  <appender name="Console" class="org.apache.log4j.ConsoleAppender">
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d %-5p [%c] (%t) %m%n"/>
+    </layout>
+  </appender>
+  
+  <root>
+    <level value="DEBUG"/>
+    <appender-ref ref="Console"/>
+  </root>
+  
+</log4j:configuration>
