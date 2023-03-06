@@ -9,10 +9,9 @@
 package com.entertainment.catalog;
 
 import static org.junit.Assert.*;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+
+import java.util.*;
+
 import org.junit.Test;
 import com.entertainment.Television;
 
@@ -21,6 +20,19 @@ public class CatalogTest {
   /**
    * Contract: a no-matches result should be an empty collection (not null).
    */
+
+  @Test
+  public void sortByVolumeIncreasing(){
+    List<Television> tvList = new ArrayList<>(Catalog.getInventory());
+    tvList.sort(new Comparator<Television>() {
+      @Override
+      public int compare(Television o1, Television o2) {
+        return 0;
+      }
+    });
+  }
+
+
   @Test
   public void testFindByBrandNoMatches() {
     Collection<Television> tvs = Catalog.findByBrand("NO-MATCHES");

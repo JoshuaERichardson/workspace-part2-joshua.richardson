@@ -31,7 +31,8 @@ extends Employee {
   public void pay() {
     System.out.println(getName() + " is paid salary " + getSalary());
   }
-  
+
+
   public Double getSalary() {
     return this.salary;
   }

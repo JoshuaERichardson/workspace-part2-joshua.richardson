@@ -9,7 +9,6 @@
 package com.javatunes.personnel;
 
 import java.sql.Date;
-import java.util.Objects;
 
 public class HourlyEmployee
 extends Employee {
@@ -33,8 +32,9 @@ extends Employee {
   public void pay() {
     System.out.println(getName() + " is paid hourly " + (getRate() * getHours()));
   }
-  
-  public Double getRate() {
+
+
+  public double getRate() {
     return this.rate;
   }
   public void setRate(Double rate) {
@@ -53,4 +53,6 @@ extends Employee {
     return getClass().getSimpleName() + ": name=" + getName() + ", hireDate=" + getHireDate() + 
       ", rate=" + getRate() + ", hours=" + getHours();
   }
+
+
 }

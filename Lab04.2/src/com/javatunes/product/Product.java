@@ -9,20 +9,20 @@
 package com.javatunes.product;
 
 public abstract class Product {
-  private String code;
+    private String code;
 
-  public Product(String code) {
-    this.code = code;
-  }
-  
-  public String getCode() {
-    return code;
-  }
-  
-  public abstract Double getPrice();
-  
-  @Override
-  public String toString() {
-    return getClass().getSimpleName() + "(" + getCode() + ")";
-  }
+    public Product(String code) {
+        this.code = code;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public abstract Double getPrice();
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + "(" + getCode() + ")";
+    }
 }

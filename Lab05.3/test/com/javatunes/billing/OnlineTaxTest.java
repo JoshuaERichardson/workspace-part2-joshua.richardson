@@ -9,15 +9,16 @@
 package com.javatunes.billing;
 
 import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 public class OnlineTaxTest {
 
-  @Test
-  public void testTaxAmount() {
-    TaxCalculator taxCalc = new OnlineTax();
-    double taxable = 100 * Math.random();
-    // System.out.println(taxable);
-    assertEquals(0.0, taxCalc.taxAmount(taxable), .001);
-  }
+    @Test
+    public void testTaxAmount() {
+        TaxCalculator taxCalc = new OnlineTax();
+        double taxable = 100 * Math.random();
+        // System.out.println(taxable);
+        assertEquals(0.0, taxCalc.taxAmount(taxable), .001);
+    }
 }

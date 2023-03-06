@@ -13,7 +13,7 @@ import java.util.Comparator;
 import org.junit.Test;
 
 public class TelevisionBrandChannelComparatorTest {
-  private Comparator<Television> comparator = new TelevisionBrandChannelComparator();
+private Comparator<Television> comparator = new Television.BrandChannelComparator();
 
   @Test
   public void testCompare() throws InvalidChannelException {  // throws clause needed because it's an unhandled checked exception

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import gov.irs.TaxPayer;
 
-public enum IRSEnum {
+enum IRSEnum {
   INSTANCE;
   
   // BUSINESS CODE

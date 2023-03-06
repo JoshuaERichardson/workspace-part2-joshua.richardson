@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.DoubleStream;
 
+
 import static com.javatunes.catalog.MusicCategory.ROCK;
 
 // OF COURSE THIS CLASS DOESN'T COMPILE
@@ -55,7 +56,10 @@ public class InMemoryCatalog implements Catalog {
 
     @Override
     public Collection<MusicItem> findByKeyword(String keyword) {
-        return null;
+        return catalogData.stream()
+                .filter(a -> a.getTitle().toLowerCase().contains(keyword.toLowerCase())
+                        || a.getArtist().toLowerCase().contains(keyword.toLowerCase()))
+                .collect(Collectors.toList());
     }
 
     @Override

@@ -10,11 +10,14 @@ package com.javatunes.billing;
 
 /**
  * Domestic orders have a graduated tax scheme:
- *  The first $20.00 is tax-free.
- *  Amount over $20.00 is taxed at 10.0%.
- *  
- * TODO: implement this algorithm.
+ * The first $20.00 is tax-free.
+ * Amount over $20.00 is taxed at 10.0%.
+ *
+ *
  */
-public class USATax {
-
+public class USATax implements TaxCalculator{
+    private static final double TAX_BREAK = 20.00;
+    public double taxAmount(double total){
+        return (total <= TAX_BREAK) ? 0.0 : (total-20)*.1;
+    }
 }
